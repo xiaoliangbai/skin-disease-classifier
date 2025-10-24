@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Skin Disease Classifier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>AI Skin Disease Classifier</h1>
+      <p class="tagline">Upload a photo of a skin lesion and get a suggestion from the model.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="demo-card">
+      <div class="left">
+        <label class="upload-label" for="imageUpload">📷 Upload Image</label>
+        <input id="imageUpload" type="file" accept="image/*" hidden />
+        <img id="preview" alt="preview" style="display:none;" />
+        <div class="controls">
+          <button id="predictBtn" disabled>Analyze</button>
+          <div id="result" class="result"></div>
+        </div>
+      </div>
+
+      <div class="right">
+        <h3>Tips</h3>
+        <ul>
+          <li>Use a clear, close-up photo of the lesion.</li>
+          <li>Good lighting and unobstructed view improve results.</li>
+          <li>Model suggestions are not medical diagnosis.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="examples" class="examples">
+      <h2>Example Predictions</h2>
+      <div class="examples-grid">
+        <div class="example">
+          <img src="examples/eczema.jpg" alt="Eczema example" />
+          <p>Eczema → 95%</p>
+        </div>
+        <div class="example">
+          <img src="examples/psoriasis.jpg" alt="Psoriasis example" />
+          <p>Psoriasis → 90%</p>
+        </div>
+        <div class="example">
+          <img src="examples/melanoma.jpg" alt="Melanoma example" />
+          <p>Melanoma → 93%</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Created by Shawn Bai · <a href="https://github.com/xiaoliangbai/skin-disease-classifier" target="_blank">GitHub repo</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
